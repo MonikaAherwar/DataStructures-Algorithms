@@ -38,6 +38,15 @@ namespace DataStructures_Algorithms.BinaryTree
             }
         }
 
-        
+        // OP: 4 5 2 6 7 3 1
+        public void PostOrderTraversal(Node root)
+        {
+            if (root != null)
+            {
+                PostOrderTraversal(root.Left);
+                PostOrderTraversal(root.Right);
+                Console.WriteLine(root.Key);
+            }
+        }
     }
 }
