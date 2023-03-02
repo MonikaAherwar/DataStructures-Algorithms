@@ -27,6 +27,17 @@ namespace DataStructures_Algorithms.BinaryTree
             }
         }
 
+        // OP: 4 2 5 1 6 3 7
+        public void InOrderTraversal(Node root)
+        {
+            if (root != null)
+            { 
+                InOrderTraversal(root.Left);
+                Console.WriteLine(root.Key);
+                InOrderTraversal(root.Right);
+            }
+        }
+
         
     }
 }
