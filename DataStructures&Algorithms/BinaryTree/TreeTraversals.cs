@@ -17,6 +17,7 @@ namespace DataStructures_Algorithms.BinaryTree
 
 
         // OP: 1 2 4 5 3 6 7
+        // Complexity = O(N)
         public void PreOrderTraversal(Node root)
         {
             if(root != null)
@@ -28,6 +29,7 @@ namespace DataStructures_Algorithms.BinaryTree
         }
 
         // OP: 4 2 5 1 6 3 7
+        // Complexity = O(N)
         public void InOrderTraversal(Node root)
         {
             if (root != null)
@@ -39,6 +41,7 @@ namespace DataStructures_Algorithms.BinaryTree
         }
 
         // OP: 4 5 2 6 7 3 1
+        // Complexity = O(N)
         public void PostOrderTraversal(Node root)
         {
             if (root != null)
