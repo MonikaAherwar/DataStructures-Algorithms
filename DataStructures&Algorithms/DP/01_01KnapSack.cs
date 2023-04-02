@@ -38,7 +38,9 @@ namespace DataStructures_Algorithms.DP
         // Memoised
         //*********
 
-        int[,] t = DP_Helper.FillDefault(m: 4, n: 7);
+        // n = 4
+        // W = 7
+        int[,] t = DP_Helper.FillDefault(m: 5, n: 8);
         
         public int _01_KnapSack_Memoised(int[] wt, int[] val, int W, int n)
         {
