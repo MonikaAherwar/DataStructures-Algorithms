@@ -8,7 +8,7 @@ namespace DataStructures_Algorithms.DP
     {
 
         //*********
-        // Memoised
+        // Top Down
         //*********
 
         // n = 4
@@ -18,11 +18,13 @@ namespace DataStructures_Algorithms.DP
         bool[,] t = new bool[5, 8];
         public bool SubsetSum_TopDown(int[] arr, int sum, int n)
         {
+            // When n = 0
             for (int k = 0; k < sum; k++)
             {
                 t[0, k] = false;
             }
 
+            // When sum = 0
             for (int k = 0; k < n; k++)
             {
                 t[k, 0] = true;
@@ -32,10 +34,12 @@ namespace DataStructures_Algorithms.DP
             {
                 for(int j = 1; j<sum; j++)
                 {
+                    // When current value is less than sum
                     if (arr[i-1] < j)
                     {
                         t[i, j] = t[i - 1, j - arr[i - 1]] || t[i - 1, j];
                     }
+                    // When current value is more than sum
                     else
                     {
                         t[i, j] = t[i - 1, j];
@@ -43,6 +47,7 @@ namespace DataStructures_Algorithms.DP
                 }
             }
 
+            // Return the last value
             return t[n, sum];
         }
     }
