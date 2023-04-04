@@ -110,7 +110,7 @@ namespace DataStructures_Algorithms.DP
                 }
             }
 
-            return dp[n+1, W+1];
+            return dp[n, W];
         }
     }
 }
