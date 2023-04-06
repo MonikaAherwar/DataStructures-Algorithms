@@ -13,7 +13,7 @@ namespace DataStructures_Algorithms.DP
 
         // n = 4
         // sum = 7
-        //int[,] t = new dp[n+1, W+1]; 
+        //int[,] t = new t[n+1, W+1]; 
 
         static bool[,] t = new bool[5, 8];
         public static bool SubsetSum_TopDown(int[] arr, int sum, int n)

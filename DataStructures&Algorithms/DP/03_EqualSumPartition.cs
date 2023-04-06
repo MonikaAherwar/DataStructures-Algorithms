@@ -6,6 +6,12 @@ namespace DataStructures_Algorithms.DP
 {
     internal class _03_EqualSumPartition
     {
+        //*********
+        // Top Down
+        //*********
+
+        // n = 4
+
         public bool EqualSumPartition(int[] arr, int n)
         {
             int sum = 0;
