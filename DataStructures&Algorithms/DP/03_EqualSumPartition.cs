@@ -15,7 +15,7 @@ namespace DataStructures_Algorithms.DP
         public bool EqualSumPartition(int[] arr, int n)
         {
             int sum = 0;
-            for(int k = 0; k < n; k++)
+            for(int k = 0; k <= n; k++)
             {
                 sum += arr[k];
             }

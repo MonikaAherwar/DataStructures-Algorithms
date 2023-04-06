@@ -19,20 +19,20 @@ namespace DataStructures_Algorithms.DP
         public static bool SubsetSum_TopDown(int[] arr, int sum, int n)
         {
             // When n = 0
-            for (int k = 0; k < sum; k++)
+            for (int k = 0; k <= sum; k++)
             {
                 t[0, k] = false;
             }
 
             // When sum = 0
-            for (int k = 0; k < n; k++)
+            for (int k = 0; k <= n; k++)
             {
                 t[k, 0] = true;
             }
 
-            for(int i=1; i <n; i++)
+            for(int i=1; i <= n; i++)
             {
-                for(int j = 1; j<sum; j++)
+                for(int j = 1; j <= sum; j++)
                 {
                     // When current value is less than sum
                     if (arr[i-1] < j)
