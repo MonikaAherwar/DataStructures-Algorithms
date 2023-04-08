@@ -15,8 +15,8 @@ namespace DataStructures_Algorithms.DP
         // sum = 7
         // int[,] t = new t[n+1, W+1]; 
 
-        int[,] t = new int[5, 8];
-        public int CountSubsetForGivenSum(int[] arr, int sum, int n)
+        static int[,] t = new int[5, 8];
+        public static int CountSubsetForGivenSum(int[] arr, int sum, int n)
         {
             int k;
 
