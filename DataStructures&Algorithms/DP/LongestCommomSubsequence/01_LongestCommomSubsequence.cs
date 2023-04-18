@@ -17,8 +17,10 @@ namespace DataStructures_Algorithms.DP.LongestCommomSubsequence
 
         public int LongestCommomSubsequence_Recursive(string X, string Y, int n, int m)
         {
+            // Base Condition
             if (m == 0 || n == 0) return 0;
 
+            // Choice Diagram
             var lcs = 0;
             if (X[m-1] == Y[n - 1])
             {
@@ -51,10 +53,13 @@ namespace DataStructures_Algorithms.DP.LongestCommomSubsequence
                 }
             }
 
+            // Base Condition
             if (m == 0 || n == 0) return 0;
 
+            // DP 
             if (t[m, n] != -1) return t[m, n];
 
+            // Choice Diagram
             if (X[m - 1] == Y[n - 1])
             {
                 t[m, n] = 1 + LongestCommomSubsequence_Recursive(X, Y, m - 1, n - 1);
@@ -75,6 +80,8 @@ namespace DataStructures_Algorithms.DP.LongestCommomSubsequence
         public static int LongestCommomSubsequence_TopDown(string X, string Y, int n, int m)
         {
             int[,] t = new int[m + 1, n + 1];
+
+            // Base Condition
 
             int k;
             for(k = 0; k <= m; k++)
