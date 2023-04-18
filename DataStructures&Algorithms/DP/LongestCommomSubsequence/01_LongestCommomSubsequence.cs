@@ -6,7 +6,10 @@ namespace DataStructures_Algorithms.DP.LongestCommomSubsequence
 {
     internal class _01_LongestCommomSubsequence
     {
-
+        // X: String X
+        // Y: String Y
+        // n: no. of elements in X
+        // m: no. of elements in Y
 
         //***********
         // Recursive
