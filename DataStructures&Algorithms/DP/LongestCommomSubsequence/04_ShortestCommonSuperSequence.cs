@@ -42,6 +42,14 @@ namespace DataStructures_Algorithms.DP.LongestCommomSubsequence
             return t[m, n];
         }
 
+        public int ShortestCommonSuperSequence_UsingLCS(string X, string Y, int m, int n)
+        {
 
+            var lcs = _01_LongestCommomSubsequence.LongestCommomSubsequence_TopDown(X, Y, m, n);
+            var scs = m + n - lcs;
+
+            return scs;
+
+        }
     }
 }
