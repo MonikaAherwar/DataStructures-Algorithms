@@ -49,9 +49,6 @@ namespace DataStructures_Algorithms.DP.LongestCommomSubsequence
             }
 
             return t[m, n];
-
-
-            return -1;
         }
     }
 }
