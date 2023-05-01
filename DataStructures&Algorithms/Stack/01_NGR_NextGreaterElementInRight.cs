@@ -7,7 +7,7 @@ namespace DataStructures_Algorithms.Stack
     internal class _01_NGR_NextGreaterElementInRight
     {
 
-        // Nearest Largest Element
+        // Nearest Largest Element Right
         // IP: 1 3 0 0 1 2 4
         // OP: 3 4 1 1 2 4 -1
         public List<int> NGR(int[] arr)
