@@ -8,6 +8,8 @@ namespace DataStructures_Algorithms.Stack
     {
 
         // Nearest Largest Element
+        // IP: 1 3 0 0 1 2 4
+        // OP: 3 4 1 1 2 4 -1
         public List<int> NGR(int[] arr)
         {
             int n = arr.Length;
