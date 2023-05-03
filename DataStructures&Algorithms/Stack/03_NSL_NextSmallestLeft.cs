@@ -50,8 +50,6 @@ namespace DataStructures_Algorithms.Stack
                 stack.Push(arr[i]);
             }
 
-            //Reverse the List
-            result.Reverse();
             return result;
         }
 
