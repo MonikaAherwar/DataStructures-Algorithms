@@ -47,7 +47,7 @@ namespace DataStructures_Algorithms.Stack
                     }
                     else
                     {
-                        result.Add(stack.Peek().stockIndex - i);
+                        result.Add(i - stack.Peek().stockIndex);
                     }
                 }
 
