@@ -8,7 +8,7 @@ namespace DataStructures_Algorithms.Stack
     {
 
         // Nearest Smallest Element Right
-        public List<int> NSR(int[] arr)
+        public static List<int> NSR(int[] arr)
         {
             int n = arr.Length;
 
@@ -55,5 +55,57 @@ namespace DataStructures_Algorithms.Stack
             return result;
         }
 
+        public static List<int> NSR_Helper(int[] arr)
+        {
+            int n = arr.Length;
+
+            if (n == 0)
+            {
+                throw new ArgumentException("Array is Empty");
+            }
+
+            List<int> result = new List<int>();
+            Stack<StackHelper> stack = new Stack<StackHelper>();
+
+            for (int i = n - 1; i >= 0; i--)
+            {
+                if (stack.Count == 0)
+                {
+                    result.Add(n);
+                }
+                else if (stack.Count > 0 && stack.Peek().Element < arr[i])
+                {
+                    result.Add(stack.Peek().Index);
+                }
+                else
+                {
+                    while (stack.Count > 0 && stack.Peek().Element >= arr[i])
+                    {
+                        stack.Pop();
+                    }
+
+                    if (stack.Count == 0)
+                    {
+                        result.Add(n);
+                    }
+                    else
+                    {
+                        result.Add(stack.Peek().Index);
+                    }
+                }
+
+                stack.Push(new StackHelper { Element = arr[i], Index = i });
+            }
+
+            //Reverse the List
+            result.Reverse();
+            return result;
+        }
+
+        internal class StackHelper
+        {
+            internal int Element;
+            internal int Index;
+        }
     }
 }
