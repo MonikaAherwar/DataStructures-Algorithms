@@ -39,7 +39,7 @@ namespace DataStructures_Algorithms.SortingAlgorithms
 
         // O(N^2)
         // In Place
-        // Not Stable
+        // Stable
         public void SelectionSortAlgorithm_Stable(int[] arr)
         {
             int n = arr.Length;
