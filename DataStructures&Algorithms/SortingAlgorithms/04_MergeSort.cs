@@ -55,11 +55,17 @@ namespace DataStructures_Algorithms.SortingAlgorithms
             }
 
             // Merge Code
-            i = 0;
+            MergeHelper(arr, L1, L2, n1, n2, lo);
+            
+        }
+
+        private void MergeHelper(int[] arr, int[] L1, int[] L2, int n1, int n2, int lo)
+        {
+            int i = 0;
             int j = 0;
             int k = lo;
 
-            while(i < n1 && j < n2)
+            while (i < n1 && j < n2)
             {
                 if (L1[i] <= L2[j])
                 {
@@ -74,14 +80,14 @@ namespace DataStructures_Algorithms.SortingAlgorithms
                 k++;
             }
 
-            while(i < n1)
+            while (i < n1)
             {
                 arr[k] = L1[i];
                 i++;
                 k++;
             }
 
-            while(j < n2)
+            while (j < n2)
             {
                 arr[k] = L2[j];
                 j++;
