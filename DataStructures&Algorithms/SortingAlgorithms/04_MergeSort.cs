@@ -59,6 +59,10 @@ namespace DataStructures_Algorithms.SortingAlgorithms
             
         }
 
+        //Helper Code to Merge two arrays L1 and L2
+        //Of size n1 and n2 respectively
+        //And update the original array: arr
+        //where staring index of 'arr' array is 'lo'
         private void MergeHelper(int[] arr, int[] L1, int[] L2, int n1, int n2, int lo)
         {
             int i = 0;
