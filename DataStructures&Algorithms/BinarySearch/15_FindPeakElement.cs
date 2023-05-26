@@ -8,7 +8,7 @@ namespace DataStructures_Algorithms.BinarySearch
     {
 
         // Binary Search on concept
-        public int PeakElement(int[] arr) {
+        public static int FindPeakElementIndex(int[] arr) {
 
             int n = arr.Length;
             int start = 0;
