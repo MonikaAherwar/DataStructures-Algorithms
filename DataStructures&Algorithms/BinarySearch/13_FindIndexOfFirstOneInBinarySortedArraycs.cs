@@ -19,6 +19,8 @@ namespace DataStructures_Algorithms.BinarySearch
                 end = end * 2;
             }
 
+
+            // Code for finding first occurrence of an element
             while (start < end)
             {
 
