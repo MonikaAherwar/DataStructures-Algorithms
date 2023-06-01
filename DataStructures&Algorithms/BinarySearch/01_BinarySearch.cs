@@ -6,7 +6,7 @@ namespace DataStructures_Algorithms.BinarySearch
 {
     internal class _01_BinarySearch
     {
-        public int BinarySearchAlgorithm(int[] arr, int ele) { 
+        public static int BinarySearchAlgorithm(int[] arr, int ele) { 
             
             int n = arr.Length;
             int start = 0;
