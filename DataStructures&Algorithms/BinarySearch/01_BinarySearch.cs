@@ -36,5 +36,36 @@ namespace DataStructures_Algorithms.BinarySearch
 
             throw new Exception("Element not found in the given array");
         }
+
+        public static int BinarySearchAlgorithm(int[] arr, int ele, int start, int end)
+        {
+
+            int n = arr.Length;
+            if (n == 0)
+            {
+                throw new ArgumentException("Array is empty");
+            }
+
+            while (start < end)
+            {
+
+                int mid = start + ((end - start) / 2);
+
+                if (arr[mid] == ele)
+                {
+                    return mid;
+                }
+                else if (ele < arr[mid])
+                {
+                    end = mid - 1;
+                }
+                else if (ele > arr[mid])
+                {
+                    start = mid + 1;
+                }
+            }
+
+            throw new Exception("Element not found in the given array");
+        }
     }
 }
