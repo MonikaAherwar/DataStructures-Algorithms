@@ -14,10 +14,13 @@ namespace DataStructures_Algorithms.BinarySearch
             if (n == 0) {
                 throw new ArgumentException("Array is empty");
             }
-            
-            if(n == 1 && arr[0] == ele) 
+
+            if (n == 1 && arr[0] == ele)
             {
                 return 0;
+            }
+            else {
+                throw new Exception("Element not found in the given array");
             }
 
             // Sorted Array
