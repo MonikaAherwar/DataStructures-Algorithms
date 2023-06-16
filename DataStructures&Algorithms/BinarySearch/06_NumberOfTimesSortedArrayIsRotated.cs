@@ -8,7 +8,7 @@ namespace DataStructures_Algorithms.BinarySearch
     {
 
         // This does not handle duplicates
-        public static int RotatedArray(int[] arr, int ele, bool rightRotatedArray) { 
+        public static int PivotInRotatedArray(int[] arr, int ele, bool rightRotatedArray) { 
             
             int n = arr.Length;
             int start = 0;
