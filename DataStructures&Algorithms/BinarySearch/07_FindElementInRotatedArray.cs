@@ -29,6 +29,58 @@ namespace DataStructures_Algorithms.BinarySearch
                 return _01_BinarySearch.BinarySearchAlgorithm(arr, ele, pivot, end);
         }
 
-        
+        public int FindElementInRotatedArrayByDirectSearch(int[] arr, int ele)
+        {
+
+            int n = arr.Length;
+            int start = 0;
+            int end = n - 1;
+
+            if (n == 0)
+            {
+                throw new ArgumentException("Array is empty");
+            }
+
+            while (start < end)
+            {
+
+                int mid = start + (end - start) / 2;
+                int prev = (n + mid - 1) % n;
+                int next = (mid + 1) % n;
+
+                if (arr[mid] == ele)
+                {
+                    return mid;
+                }
+
+                if (arr[start] < arr[mid])
+                {
+
+                    if (ele >= arr[start] && ele <= arr[mid])
+                    {
+                        end = mid - 1;
+                    }
+                    else
+                    {
+                        start = mid + 1;
+                    }
+                }
+                else if (arr[mid] < arr[end])
+                {
+                    if (ele >= arr[mid] && ele <= arr[end])
+                    {
+                        start = mid + 1;
+                    }
+                    else
+                    {
+                        end = mid - 1;
+                    }
+                }
+            }
+
+            // If element is not found
+            return -1;
+        }
+
     }
 }
