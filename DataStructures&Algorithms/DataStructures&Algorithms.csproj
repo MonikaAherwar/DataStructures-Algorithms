@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Binary Trees\" />
-    <Folder Include="Binary Search Trees\" />
+    <Compile Remove="Binary Search Trees\**" />
+    <Compile Remove="Binary Trees\**" />
+    <EmbeddedResource Remove="Binary Search Trees\**" />
+    <EmbeddedResource Remove="Binary Trees\**" />
+    <None Remove="Binary Search Trees\**" />
+    <None Remove="Binary Trees\**" />
   </ItemGroup>
 
 </Project>
