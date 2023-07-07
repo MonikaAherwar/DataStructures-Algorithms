@@ -30,7 +30,7 @@ namespace DataStructures_Algorithms.SlidingWindow
                     int negativeNumInCurrentWindow = queue.Count == 0 ? 0 : queue.Peek();
                     negatives.Add(negativeNumInCurrentWindow);
 
-                    if (queue.Peek() == arr[j]) { 
+                    if (queue.Peek() == arr[i]) { 
                         queue.Dequeue();
                     }
 
