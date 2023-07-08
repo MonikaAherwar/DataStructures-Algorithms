@@ -24,7 +24,7 @@ namespace DataStructures_Algorithms.SlidingWindow
 
             Dictionary<char, int> dict = new Dictionary<char, int>();
             dict = CreateMapForCharacterCount(str2);
-            int count = dict.Count;
+            int dictinctCharacterCount = dict.Count;
             //SlidingWindowCode
 
             int i = 0;
@@ -37,7 +37,7 @@ namespace DataStructures_Algorithms.SlidingWindow
                 if (dict.ContainsKey(str1[j])) {
                     dict[str1[j]]--;
 
-                    if (dict[str1[j]] == 0) count--;
+                    if (dict[str1[j]] == 0) dictinctCharacterCount--;
                 }
 
                 if (j - i + 1 < k) {
@@ -45,12 +45,12 @@ namespace DataStructures_Algorithms.SlidingWindow
                 }
                 else if (j - i + 1 == k) {
 
-                    if (count == 0) anagramCount++;
+                    if (dictinctCharacterCount == 0) anagramCount++;
 
                     if (dict.ContainsKey(str1[i])) {
                         dict[str1[i]]++;
 
-                        if (str1[i] == 1) count++;
+                        if (str1[i] == 1) dictinctCharacterCount++;
                     }
 
                     i++;
