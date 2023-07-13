@@ -6,6 +6,8 @@ namespace DataStructures_Algorithms.SlidingWindow
 {
     internal class PickMaximumToysOfKTypes
     {
+
+        // This is another variant of problem -> max subarray with k unique characters
         int maxToysCount = 0;
 
         public int LongestSubstring(string toys, int typeOfToys)
