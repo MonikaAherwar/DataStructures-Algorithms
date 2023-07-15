@@ -7,7 +7,7 @@ namespace DataStructures_Algorithms.SlidingWindow
     internal class LargestSubarraySumForNegativeNumbers
     {
 
-        // Kadane's Algorithm!
+        // Variable size sliding window
         // Works for both: 
         // 1. All positive number
         // 2. Including Negative Numbers
