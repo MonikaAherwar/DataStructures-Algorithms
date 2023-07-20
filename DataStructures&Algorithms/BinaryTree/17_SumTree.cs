@@ -7,7 +7,7 @@ namespace DataStructures_Algorithms.BinaryTree
     internal class _17_SumTree
     {
         bool IsSumTree = true;
-        public int SumTree(Node root)
+        public void SumTree(Node root)
         {
             if(root == null)
             {
