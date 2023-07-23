@@ -8,8 +8,6 @@ namespace DataStructures_Algorithms.BinarySearchTree
 {
     internal class _12_LCA
     {
-        bool found1 = false;
-        bool found2 = false ;
         public Node LCA(Node root, Node p, Node q)
         {
             if (root == null) return null;
