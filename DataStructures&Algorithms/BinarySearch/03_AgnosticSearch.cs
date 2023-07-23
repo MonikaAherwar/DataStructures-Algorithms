@@ -19,9 +19,7 @@ namespace DataStructures_Algorithms.BinarySearch
             {
                 return 0;
             }
-            else {
-                throw new Exception("Element not found in the given array");
-            }
+            
 
             // Sorted Array
             if (arr[0] < arr[1])
