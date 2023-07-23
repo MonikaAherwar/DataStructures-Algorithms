@@ -11,9 +11,6 @@ namespace DataStructures_Algorithms.BinarySearch
         public int FindMaximumElementArrayInBitonicArray(int[] arr) {
 
             int n = arr.Length;
-            int start = 0;
-            int end = n - 1;
-            int index = -1;
 
             if (n == 0)
             {
