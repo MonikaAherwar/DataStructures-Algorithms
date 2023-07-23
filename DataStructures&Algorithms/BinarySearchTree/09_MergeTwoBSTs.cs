@@ -14,6 +14,7 @@ namespace DataStructures_Algorithms.BinarySearchTree
             if (root2 == null) return root1;
 
             // May be later
+            return null;
         }
     }
 }
