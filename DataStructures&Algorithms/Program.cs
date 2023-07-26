@@ -9,8 +9,9 @@ namespace DataStructures_Algorithms
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            //InitializeTrieNode();
             
+            //InitializeTrieNode();
+            //TestTrie();   
         }
 
         private static void InitializeTrieNode()
@@ -28,6 +29,14 @@ namespace DataStructures_Algorithms
                 var val = TrieNode.Search(root, str);
                 Console.WriteLine(val);
             }
+        }
+
+        private static void TestTrie()
+        {
+            _01_LongestPrefixString l = new _01_LongestPrefixString();
+            string[] strs = { "flower", "flow", "flight" };
+            var ans = l.LongestPrefixString(strs);
+            Console.WriteLine(ans);
         }
     }
 }
