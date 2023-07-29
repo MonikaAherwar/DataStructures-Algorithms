@@ -9,10 +9,31 @@ namespace DataStructures_Algorithms
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            
+
             //InitializeTrieNode();
-            //TestTrie();   
+            //TestTrieNode();
+            //
+            InitializeAndTestTrie();
         }
+
+        private static void InitializeAndTestTrie() { 
+            DataStructures_Algorithms.Trie.Trie trie = new Trie.Trie();
+            
+            string[] strs = { "flower", "flow", "flight" };
+
+            // Insert
+            foreach (string str in strs)
+            {
+                trie.Insert(str);
+            }
+
+            // Search
+            foreach (string str in strs)
+            {
+                var val = trie.Search(str);
+            }
+        }
+
 
         private static void InitializeTrieNode()
         {
@@ -31,7 +52,7 @@ namespace DataStructures_Algorithms
             }
         }
 
-        private static void TestTrie()
+        private static void TestTrieNode()
         {
             _01_LongestPrefixString l = new _01_LongestPrefixString();
             string[] strs = { "flower", "flow", "flight" };
