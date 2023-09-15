@@ -6,6 +6,7 @@ namespace DataStructures_Algorithms.SlidingWindow
 {
     internal class MaximumSubarraySumKadanesAlgorithm
     {
+        // Problem: Find the sum of subarray such that sum is maximum in all the subarrays
 
         // Kadane's Algorithm!
         // Works for both: 

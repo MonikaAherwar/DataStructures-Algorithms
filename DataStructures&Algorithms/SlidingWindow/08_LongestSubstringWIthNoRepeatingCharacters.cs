@@ -8,13 +8,13 @@ namespace DataStructures_Algorithms.SlidingWindow
     {
         int maxLength = 0;
 
-        public int LongestSubstring(string str, int k)
+        public int LongestSubstring(string str)
         {
 
             int i = 0;
             int j = 0;
             int n = str.Length;
-            int currLength = 0;
+            int count = 0;
             Dictionary<char, int> dict = new Dictionary<char, int>();
 
             while (j < n)
@@ -23,37 +23,32 @@ namespace DataStructures_Algorithms.SlidingWindow
                 if (!dict.ContainsKey(str[j]))
                 {
                     dict.Add(str[j], 1);
-                    currLength++;
+                    count++;
                 }
                 else
                 {
                     dict[str[j]]++;
                 }
 
-                if (currLength < k)
-                {
-                    j++;
-                }
-                else if (currLength == k)
+                if (count == j - i + 1)
                 {
                     maxLength = Math.Max(maxLength, j - i + 1);
-                    j++;
                 }
-                else if (currLength > k)
+                else if (count < j - i + 1)
                 {
-
-                    while (currLength > k)
+                    while (count < j - i + 1)
                     {
                         dict[str[i]]--;
                         if (dict[str[i]] == 0)
                         {
-                            currLength--;
+                            count--;
                             dict.Remove(str[i]);
                         }
                         i++;
                     }
-                    j++;
                 }
+
+                j++;
             }
 
             return maxLength;

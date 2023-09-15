@@ -6,6 +6,7 @@ namespace DataStructures_Algorithms.SlidingWindow
 {
     internal class LargestSubarraySumForNegativeNumbers
     {
+        // Problem: Find the largest window for given sum
 
         // Variable size sliding window
         // Works for both: 

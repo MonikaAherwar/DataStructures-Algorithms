@@ -22,16 +22,20 @@ namespace DataStructures_Algorithms.SlidingWindow
             int i = 0;
             int j = 0;
             int n = arr.Length;
-            Queue<int> queue = new Queue<int>();
+
+            // Queue<int> queue1 = new Queue<int>()
+            // Since normal queue will not work, 
+            // We will use double sided linked list.
+            LinkedList<int> queue = new LinkedList<int>();
 
             while (j < n)
             {
-                while(queue.Count > 0 && queue.Peek() < arr[j])
+                while(queue.Count > 0 && queue.Last.Value < arr[j])
                 {
-                    queue.Dequeue();
+                    queue.RemoveLast();
                 }
                     
-                queue.Enqueue(arr[j]);
+                queue.AddLast(arr[j]);
 
                 if (j - i + 1 < k)
                 {
@@ -40,12 +44,12 @@ namespace DataStructures_Algorithms.SlidingWindow
                 else if (j - i + 1 == k)
                 {
 
-                    int maximumInCurrentWindow = queue.Peek();
+                    int maximumInCurrentWindow = queue.First.Value;
                     maximums.Add(maximumInCurrentWindow);
 
-                    if (queue.Peek() == arr[i])
+                    if (maximumInCurrentWindow == arr[i])
                     {
-                        queue.Dequeue();
+                        queue.RemoveFirst();
                     }
 
                     i++;
