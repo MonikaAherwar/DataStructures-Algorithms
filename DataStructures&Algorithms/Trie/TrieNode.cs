@@ -7,7 +7,6 @@ using System.Text;
 namespace DataStructures_Algorithms.Trie
 {
 
-    
     internal class TrieNode
     {
         internal TrieNode[] node;

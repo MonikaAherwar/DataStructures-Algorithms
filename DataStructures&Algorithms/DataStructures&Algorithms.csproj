@@ -15,4 +15,8 @@
     <None Remove="Binary Trees\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Recursion\" />
+  </ItemGroup>
+
 </Project>
